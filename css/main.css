@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Hind&effect=3d-float);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic&effect=3d-float);
+p{
+	font-family: "Source Sans Pro", sans-serif;
+}
+a{
+	font-family: "Source Sans Pro", sans-serif;
+}
+.jumbotron{
+	background-image: url(../resources/Jumbotron.jpg);
+	background-size: cover;
+	
+}
+.jumbotron{
+	color: #f7f7f7;
+	
+}
+.jumbotron h1{
+	font-family: 'Source Sans Pro', sans-serif;
+	
+}
+
+.btn-link{
+	color: #f7f7f7;
+}
+.btn-link:hover{
+	color:#f7f7f7;
+}
+#awens{
+	background-color: #f7f7f7;
+}
