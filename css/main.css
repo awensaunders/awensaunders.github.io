@@ -10,6 +10,11 @@ a{
 h2{
 	font-family: "Source Sans Pro", sans-serif;
 }
+h3{
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+}
 
 .jumbotron{
 	background-image: url(../resources/jumbotron.jpg);
@@ -17,7 +22,7 @@ h2{
 	
 }
 .jumbotron{
-	color: #f7f7f7;
+	color: #f6f6f6;
 	
 }
 .jumbotron h1{
@@ -25,19 +30,13 @@ h2{
 	font-weight:300;
 	
 }
-
-.btn-link{
-	color: #f7f7f7;
-}
-.btn-link:hover{
-	color:#f7f7f7;
-}
-#awens{
-	background-color: #f7f7f7;
-}
 #portrait{
 	float:left;
 	margin: 0px 10px 0px 0px;
 	width: 128px;
 	height: 128px;
 }
+.footer{
+	background-color: #f6f6f6;
+}
+#F6F6F6
