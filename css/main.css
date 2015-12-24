@@ -1,13 +1,18 @@
-@import url(https://fonts.googleapis.com/css?family=Hind&effect=3d-float);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic&effect=3d-float);
 p{
 	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 300;
 }
 a{
 	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 300;
 }
+h2{
+	font-family: "Source Sans Pro", sans-serif;
+}
+
 .jumbotron{
-	background-image: url(../resources/Jumbotron.jpg);
+	background-image: url(../resources/jumbotron.jpg);
 	background-size: cover;
 	
 }
@@ -17,6 +22,7 @@ a{
 }
 .jumbotron h1{
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:300;
 	
 }
 
@@ -28,4 +34,10 @@ a{
 }
 #awens{
 	background-color: #f7f7f7;
+}
+#portrait{
+	float:left;
+	margin: 0px 10px 0px 0px;
+	width: 128px;
+	height: 128px;
 }
