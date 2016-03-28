@@ -1,0 +1,19 @@
+.jumbotron{
+	background-image: url(../resources/Jumbotron.jpg);
+	background-size: cover;
+	
+}
+.jumbotron{
+	color: #f7f7f7;
+	
+}
+.jumbotron h1{
+	font-family: 'Source Sans Pro', sans-serif;
+	
+}
+#portrait{
+	float:left;
+	margin: 0px 10px 0px 0px;
+	width: 128px;
+	height: 128px;
+}
