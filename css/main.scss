@@ -5,10 +5,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic&effect=3d-float);
 
-.footer{
-	background-color: #f6f6f6;
-  padding: 1em;
-}
 
 
 // Our variables
@@ -57,3 +53,14 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+
+.navbar{
+  margin: 0px;
+}
+
+.footer{
+	background-color: #f6f6f6;
+  padding: 1em;
+  border-top: 1px solid $grey-color-light;
+}
