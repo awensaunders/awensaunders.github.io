@@ -3,12 +3,9 @@ title: "Syntax Highlighting Test"
 author: "Awen"
 date:  2016-03-30 19:23:07 -0700
 layout: post
-categories:
+categories: test
 ---
-
-
-
-###Hello, world! 
+## Hello, world! 
 
 I am a simple syntax highlighting test `echo hello`
 
@@ -22,3 +19,6 @@ Here is a simple test of maths rendering $$ a^2 + b^2 + \sum_{13}^{\infty} \sum_
 
 and as a block 
 
+$$
+a^2+b^2=c^2
+$$
