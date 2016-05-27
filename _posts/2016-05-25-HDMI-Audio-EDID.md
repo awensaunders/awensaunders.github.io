@@ -6,7 +6,7 @@ layout: post
 categories:
 ---
 
-I recently decided to switch the in-wall cabling for my projector from  to HDMI. This resulted in a huge improvement in video quality, but introduced a number of new and interesting bugs. I bought a [KanexPro 4x1 HDMI switch with optical audio](http://www.kanexpro.com/item/?id=SW-HD4X1AUD4K) to switch inputs and output audio to my Pioneer receiver (which is too old to support HDMI). My PS3 was the only device that worked with this setup initially, as all my other devices were unwilling to send audio over the HDMI connection to a projector that did not report audio support. 
+I recently decided to switch the in-wall cabling for my projector from component video to HDMI. This resulted in a huge improvement in video quality, but introduced a number of new and interesting bugs. I bought a [KanexPro 4x1 HDMI switch with optical audio](http://www.kanexpro.com/item/?id=SW-HD4X1AUD4K) to switch inputs and output audio to my Pioneer receiver (which is too old to support HDMI). My PS3 was the only device that worked with this setup initially, as all my other devices were unwilling to send audio over the HDMI connection to a projector that did not report audio support. 
 
 ### EDID -- Extended Display Identification Data
 
@@ -64,7 +64,7 @@ My custom EDID:
 
 ### Using the New EDID
 
-EDID is usually stored in an EEPROM that is directly connected to the I<sup>2</sup>C bus of the source device via pins 16 and 17 of the HDMI cable. I originally planned to attach a new EEPROM (specifically [this](http://www.microchip.com/wwwproducts/en/24LCS22A)) to the HDMI cable with my new EDID flashed to it. As it turned out, that ended up being unnecessary. Upon reading the [service manual](http://www.optoma.co.uk/optomatechnical/sharing/HD20/Service%20Manuals/HD20_HD200X_HD2200_HD20LV_HD21_HD23%20Service%20manual%20v7.0.pdf) for my projector, I surmised that the EEPROM in the projector was not write-protected. After enabling support for userland I<sup>2</sup>C with `modprobe i2c-dev` and installing the `i2c-tools` package, I identified that the DDC on my laptop was on I<sup>2</sup>C bus 3 (it will always be at address `0x50`). I used the `i2cdump 3 0x50` command to dump the EDID onto my Linux laptop to verify its integrity. After a bit of experimentation, I was able to put together a simplistic Python script to write my new EDID to my projector. 
+EDID is usually stored in an EEPROM that is directly connected to the I<sup>2</sup>C bus of the source device via pins 16 and 17 of the HDMI cable. I originally planned to attach a new EEPROM (specifically [this](http://www.microchip.com/wwwproducts/en/24LCS22A)) to the HDMI cable with my custom EDID flashed to it. As it turned out, that ended up being unnecessary. Upon reading the [service manual](http://www.optoma.co.uk/optomatechnical/sharing/HD20/Service%20Manuals/HD20_HD200X_HD2200_HD20LV_HD21_HD23%20Service%20manual%20v7.0.pdf) for my projector, I surmised that the EEPROM in the projector was not write-protected. After enabling support for userland I<sup>2</sup>C with `modprobe i2c-dev` and installing the `i2c-tools` package, I identified that the DDC on my laptop was on I<sup>2</sup>C bus 3 (it will always be at address `0x50`). I used the `i2cdump 3 0x50` command to dump the EDID onto my Linux laptop to verify its integrity. It is important to make sure not to write to any address other than `0x50` on the I<sup>2</sup>C bus (and to make sure you are using the correct bus), because it is possible to seriously damage a computer by writing an EDID to the EEPROMs on your RAM sticks. After a bit of experimentation, I was able to put together a simplistic Python script to write the new EDID to my projector. 
 
 
     #!/usr/bin/env python3
@@ -84,7 +84,7 @@ EDID is usually stored in an EEPROM that is directly connected to the I<sup>2</s
 
 After running this script (as root) and verifying the results with `i2cdump`, I was confident that the EDID had been changed correctly. I removed all of the excess optical audio cables from my system, and I can now switch between all of my A/V sources with just one button. 
 
-> Disclaimer: changing EEPROM settings on your device is somewhat risky, and will absolutely void your warranty. If you want a turnkey solution, something like the [Dr. HDMI](https://www.hdfury.com/shop/otherhdfuryhardware/dr-hdmi/) might be more to your liking. I have no affiliation with HDFury, and am only linking to them as an alternative option.  
+> Disclaimer: changing EEPROM settings on your device is somewhat risky, and will absolutely void your warranty. If you want a turnkey solution, something like the [Dr. HDMI](https://www.hdfury.com/shop/otherhdfuryhardware/dr-hdmi/) might be more to your liking. I have no affiliation with HDFury, and am only linking to them as an alternative option. I am not responsible if you end up bricking your device. Please make a backup of your original EDID before writing a new one. 
 
 *[E-EDID]: Enhanced Extended Display Identification Data
 *[DDC]: Display Data Channel
