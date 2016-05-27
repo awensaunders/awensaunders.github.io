@@ -84,6 +84,8 @@ EDID is usually stored in an EEPROM that is directly connected to the I<sup>2</s
 
 After running this script (as root) and verifying the results with `i2cdump`, I was confident that the EDID had been changed correctly. I removed all of the excess optical audio cables from my system, and I can now switch between all of my A/V sources with just one button. 
 
+> Disclaimer: changing EEPROM settings on your device is somewhat risky, and will absolutely void your warranty. If you want a turnkey solution, something like the [Dr. HDMI](https://www.hdfury.com/shop/otherhdfuryhardware/dr-hdmi/) might be more to your liking. I have no affiliation with HDFury, and am only linking to them as an alternative option.  
+
 *[E-EDID]: Enhanced Extended Display Identification Data
 *[DDC]: Display Data Channel
 *[SAD]: Short Audio Descriptor
