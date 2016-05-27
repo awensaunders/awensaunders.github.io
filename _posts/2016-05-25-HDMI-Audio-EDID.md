@@ -64,7 +64,7 @@ My custom EDID:
 
 ### Using the New EDID
 
-EDID is usually stored in an EEPROM that is directly connected to the I<sup>2</sup>C bus of the source device via pins 16 and 17 of the HDMI cable. I originally planned to attach a new EEPROM (specifically [this](http://www.microchip.com/wwwproducts/en/24LCS22A)) to the HDMI cable with my new EDID flashed to it. As it turned out, that ended up being unnecessary. Upon reading the [service manual](http://www.optoma.co.uk/optomatechnical/sharing/HD20/Service%20Manuals/HD20_HD200X_HD2200_HD20LV_HD21_HD23%20Service%20manual%20v7.0.pdf) for my projector, I surmised that the EEPROM in the projector was not write-protected. After enabling support for userland I<sup>2</sup>C with `modprobe i2c-dev` and installing the `i2c-tools` package, I identified that the DDC on my laptop was on I<sup>2</sup>C bus 3 (it will always be at address `0x50`). After a bit of experimentation, I was able to put together a simplistic Python script to write my new EDID to my projector. 
+EDID is usually stored in an EEPROM that is directly connected to the I<sup>2</sup>C bus of the source device via pins 16 and 17 of the HDMI cable. I originally planned to attach a new EEPROM (specifically [this](http://www.microchip.com/wwwproducts/en/24LCS22A)) to the HDMI cable with my new EDID flashed to it. As it turned out, that ended up being unnecessary. Upon reading the [service manual](http://www.optoma.co.uk/optomatechnical/sharing/HD20/Service%20Manuals/HD20_HD200X_HD2200_HD20LV_HD21_HD23%20Service%20manual%20v7.0.pdf) for my projector, I surmised that the EEPROM in the projector was not write-protected. After enabling support for userland I<sup>2</sup>C with `modprobe i2c-dev` and installing the `i2c-tools` package, I identified that the DDC on my laptop was on I<sup>2</sup>C bus 3 (it will always be at address `0x50`). I used the `i2cdump 3 0x50` command to dump the EDID onto my Linux laptop to verify its integrity. After a bit of experimentation, I was able to put together a simplistic Python script to write my new EDID to my projector. 
 
 
     #!/usr/bin/env python3
@@ -82,7 +82,7 @@ EDID is usually stored in an EEPROM that is directly connected to the I<sup>2</s
 {:.language-python}
 > This script is also available as a [gist](https://gist.github.com/awensaunders/f538d6a61961fc20f9dc11b0c29c8ec0).
 
-After running this script and verifying the results with `i2cdump` 
+After running this script (as root) and verifying the results with `i2cdump`, I was confident that the EDID had been changed correctly. I removed all of the excess optical audio cables from my system, and I can now switch between all of my A/V sources with just one button. 
 
 *[E-EDID]: Enhanced Extended Display Identification Data
 *[DDC]: Display Data Channel
