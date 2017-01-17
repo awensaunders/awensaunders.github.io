@@ -15,6 +15,7 @@ description: The personal website for Awen Saunders
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://awens.org" # the base hostname & protocol for your site
 github_username: "awensaunders"
+twitter_username: "awen_saunders"
 
 # Build settings
 markdown: kramdown

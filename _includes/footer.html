@@ -1,33 +1,38 @@
 <footer>
-	<div class="container-fluid">
-		<div class="row footer">
-			<div class="col-md-4 footercol">
-				<h3 class="footerhead">AwenS.org</h3>
+    <div class="container-fluid">
+        <div class="row footer">
+            <div class="col-md-4 footercol">
+                <h3 class="footerhead">AwenS.org</h3>
                 <a href="/">Home</a>
-			</div>
-			<div class="col-md-4 footercol">
-				<h3 id="contact" class="footerhead">Contact</h3>
+            </div>
+            <div class="col-md-4 footercol">
+                <h3 id="contact" class="footerhead">Contact</h3>
                 {% if site.github_username %}
                 <p>
-                  {% include icon-github.html username=site.github_username %}
+                {% include icon-github.html username=site.github_username %}
+                </p>
+                {% endif %}
+                {% if site.twitter_username %}
+                <p>
+                {% include icon-twitter.html username=site.twitter_username %}
                 </p>
                 {% endif %}
                 <p>
-                    <a href="mailto:awen@awens.org"><span class="icon glyphicon glyphicon-envelope" aria-hidden="true" id=emailicon></span> awen@awens.org</a>
+                <a href="mailto:awen@awens.org"><span class="icon glyphicon glyphicon-envelope" aria-hidden="true" id=emailicon></span> awen@awens.org</a>
                 </p>
-			</div>
-			<div class="col-md-4 footercol">
-				<h3 class="footerhead">Acknowledgements</h3>
+            </div>
+            <div class="col-md-4 footercol">
+                <h3 class="footerhead">Acknowledgements</h3>
                 <p>Hosted by <a href="https://pages.github.com/">GitHub Pages</p>
-				<p>Powered by <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="http://jekyllrb.com/">Jekyll</a> </p>
-				<p>Font: Adobe Source Pro provided by <a href="https://www.google.com/fonts">Google Fonts</a></p>
-				<p>Jumbotron photo by Awen Saunders</p>
-				<p>Portrait photo by <a href="http://www.mitchellpdx.com">Mitchell Lenneville</a></p>
-				<p>All text is provided under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
-				<p>All source code is available under the <a href="https://opensource.org/licenses/MIT">MIT License</a></p>
-				<p>Copyright Awen Saunders</p>
-			</div>
-			
-		</div>		
-	</div>
+                <p>Powered by <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="http://jekyllrb.com/">Jekyll</a> </p>
+                <p>Font: Adobe Source Pro provided by <a href="https://www.google.com/fonts">Google Fonts</a></p>
+                <p>Jumbotron photo by Awen Saunders</p>
+                <p>Portrait photo by <a href="http://www.mitchellpdx.com">Mitchell Lenneville</a></p>
+                <p>All text is provided under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+                <p>All source code is available under the <a href="https://opensource.org/licenses/MIT">MIT License</a></p>
+                <p>Copyright Awen Saunders</p>
+            </div>
+
+        </div>
+    </div>
 </footer>
