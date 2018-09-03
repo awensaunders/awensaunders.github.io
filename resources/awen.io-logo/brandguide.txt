@@ -1,0 +1,15 @@
+Fonts:
+
+Main Font: ManifoldCF Light
+
+Colors:
+
+White (Background)
+
+Hex: #ffffff
+RGB: rgb(255, 255, 255)
+
+Matterhorn (Main Font)
+
+Hex: #523d4a
+RGB: rgb(82, 61, 74)
