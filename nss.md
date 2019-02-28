@@ -1,8 +1,8 @@
 
 ---
-layout: default
+layout: post
 redirect_to:
   - https://intranet.royalholloway.ac.uk/criminologyandsociology/informationforcurrentstudents/nss.aspx
 ---
 
-<h1> Take the NSS </h1>
+# Take the NSS
