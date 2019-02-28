@@ -8,6 +8,8 @@
 gems:
   - jekyll-sitemap
   
+plugins:
+  - jekyll-redirect-from
 
 # Site settings
 title: awen.io
@@ -19,3 +21,4 @@ twitter_username: "awen_saunders"
 
 # Build settings
 markdown: kramdown
+
