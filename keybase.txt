@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/awensaunders
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://awen.io
+  * I am awensaunders (https://keybase.io/awensaunders) on keybase.
+  * I have a public key ASBpWI4GHAWdI6qZ06dzQBwVYObQNXtmI1c6hy_Ru4LbIwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012069588e061c059d23aa99d3a773401c1560e6d0357b6623573a872fd1bb82db230a",
+      "host": "keybase.io",
+      "kid": "012069588e061c059d23aa99d3a773401c1560e6d0357b6623573a872fd1bb82db230a",
+      "uid": "9901ddb3251796b141b0bc719b136219",
+      "username": "awensaunders"
+    },
+    "merkle_root": {
+      "ctime": 1553614931,
+      "hash": "9b07c06b68e7d6a609e5dddd9032d7c65d3dcb4a2f28bad62ff66f9c030535bdf38819a0cc8088146139fec105ce1ab8b9c41a3f63233c0b7b246542d901e432",
+      "hash_meta": "ca533e5a7d4b104d5295018f50cae1f6a56ed1a0b185f26dad90b18fd81789e9",
+      "seqno": 5026050
+    },
+    "service": {
+      "entropy": "UHAKaahv4qjxg3LUHUsJIEpm",
+      "hostname": "awen.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1553614953,
+  "expire_in": 504576000,
+  "prev": "58c218183c96c87f6b66af79132aca63b8f9a0101874ade0ac966b4df6dfb80f",
+  "seqno": 18,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgaViOBhwFnSOqmdOnc0AcFWDm0DV7ZiNXOocv0buC2yMKp3BheWxvYWTESpcCEsQgWMIYGDyWyH9rZq95EyrKY7j5oBAYdK3grJZrTfbfuA/EIOveYXBL7o5NkX9X2if9xsFF85tF+2lFSNm9x70Dsu8NAgHCo3NpZ8RA0cqWzV+yvCNCF8UgcWGVqUXha8NC0/LyTdqioTrLQMzRQLPU7UGqEqT4IwCtuop6/WGzz4xX6I6iha/M10reCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBk0JcBxQkyqh1LLNEUEyPLvGS9/ZFlZXQLmP8LOC5j9o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/awensaunders
+
+==================================================================
